@@ -1,0 +1,32 @@
+<ul class="heroes">
+  <li *ngFor="let hero of property">
+    <a routerLink="/detail/{{hero.id}}">
+      <span class="badge">{{hero.id}}</span> {{hero.username}}
+    </a>
+  </li>
+</ul>
+<mat-card class="example-card">
+  <mat-card-header class="bg-color-card-header">
+    <mat-card-title>Registration </mat-card-title>
+  </mat-card-header>
+  <form [formGroup]="form" class="login-form">
+    <mat-card-content>
+      <div class="example-container">
+        <mat-form-field>
+          <input matInput placeholder="Username" type="text" name="username" id="username" formControlName="username">
+        </mat-form-field>
+        <mat-form-field _class="login-full-width">
+          <input matInput placeholder="email" name="email" formControlName="email" required>
+        </mat-form-field>
+        <mat-form-field _class="login-full-width">
+          <input matInput placeholder="Password" type="password" name="password" formControlName="password" required>
+        </mat-form-field>
+      </div>
+
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button mat-raised-button (click)="addRegister()" color="primary">Registration</button>
+    </mat-card-actions>
+  </form>
+</mat-card>

@@ -1,0 +1,42 @@
+<mat-grid-list cols="4" rowHeight="100px">
+  <mat-grid-tile [colspan]="2" [rowspan]="1" [style.background]="lightblue">
+    <div style="display: block">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Category" value="" (input)='category=$event.target.value'>
+      </mat-form-field>
+    </div>
+    <span class='btn-mrg'>
+      <button mat-raised-button color="primary" (click)="addCategory()">Primary</button>
+    </span>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="2" [rowspan]="1" [style.background]="lightgreen">
+    <div style="display: block">
+      <canvas baseChart [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType"
+        (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+      </canvas>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="2" [rowspan]="1" [style.background]="lightblue">
+    <div style="display: block">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Category" value="" (input)='category=$event.target.value'>
+      </mat-form-field>
+    </div>
+    <span class='btn-mrg'>
+      <button mat-raised-button color="primary" (click)="addCategory()">Primary</button>
+    </span>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="2" [rowspan]="1" [style.background]="lightgreen">
+    <div style="display: block">
+      <canvas baseChart [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType"
+        (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+      </canvas>
+    </div>
+  </mat-grid-tile>
+
+  <mat-grid-tile [colspan]="2" [rowspan]="1" [style.background]="lightgreen">
+    <div style="display: block">
+      test
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>

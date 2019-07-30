@@ -1,0 +1,31 @@
+<!-- <div class="example-sidenav-content">
+    <a mat-button routerLink="/home">Home</a>
+</div> -->
+ <mat-sidenav-container class="example-sidenav-container">
+    <mat-sidenav-content>
+      <a mat-button routerLink="/home">Home</a>
+    </mat-sidenav-content>
+    <mat-sidenav-content>
+        <a mat-button *ngIf="auth.isLoggedIn()" routerLink="/list-of-registers">Register list</a>
+    </mat-sidenav-content>
+    <mat-sidenav-content>
+        <a mat-button *ngIf="!auth.isLoggedIn()" routerLink="/registration">Register</a>
+    </mat-sidenav-content>
+    <mat-sidenav-content>
+        <a mat-button *ngIf="!auth.isLoggedIn()" routerLink="/login">Login</a>
+    </mat-sidenav-content>
+    <mat-sidenav-content>
+        <a mat-button *ngIf='auth.isLoggedIn()' (click)="auth.logout()">Logout</a>
+    </mat-sidenav-content>  
+    <mat-sidenav-content>
+        <a mat-button  routerLink="/expensive-detail">Expensive Detail</a>
+    </mat-sidenav-content> 
+     <mat-sidenav-content>
+        <a mat-button  routerLink="/expensive">Expensive</a>
+    </mat-sidenav-content> 
+  </mat-sidenav-container>
+<!-- <a mat-button routerLink="/home">Home</a>
+<a mat-button *ngIf="auth.isLoggedIn()" routerLink="/list-of-registers">Register list</a>
+<a mat-button *ngIf="!auth.isLoggedIn()" routerLink="/registration">Register</a>
+<a mat-button *ngIf="!auth.isLoggedIn()" routerLink="/login">Login</a>
+<a mat-button *ngIf='auth.isLoggedIn()' (click)="auth.logout()">Logout</a> -->
